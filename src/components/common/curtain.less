@@ -1,0 +1,66 @@
+.curtain-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-sizing: border-box;
+  z-index: 1500;
+
+  .curtain-mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .curtain-inner {
+    
+  }
+
+  .curtain-content {
+    position: relative;
+  }
+  .curtain-close {
+    width: 62rpx;
+    height: 62rpx;
+    position: absolute;
+    right: 50rpx;
+    top: 0;
+    z-index: 200;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+
+    .curtain-content {
+      animation-duration: 0.3s;
+      animation-timing-function: ease;
+
+      &.up {
+        animation-name: up;
+      }
+      &.down {
+        animation-name: down;
+      }
+    }
+  }
+
+  @keyframes up {
+    0% {transform: translateY(50rpx);}
+    100% {transform: translateY(0);}
+  }
+  @keyframes down {
+    0% {transform: translateY(-50rpx);}
+    100% {transform: translateY(0);}
+  }
+}

@@ -1,0 +1,43 @@
+.clearfix {
+  zoom: 1;
+  _height: 1px;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+  
+.show{
+  display: block;
+}
+
+
+.hide{
+  display: none;
+}
+  
+// 去除编译器滚动条
+::-webkit-scrollbar {
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}

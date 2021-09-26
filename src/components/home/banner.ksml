@@ -1,0 +1,3 @@
+<view class="banner-wrap">
+  {{list}}--banner
+</view>

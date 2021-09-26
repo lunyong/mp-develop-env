@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "banner": "../components/home/banner",
+    "navigation": "../components/common/navigation",
+    "curtain": "../components/common/curtain"
+  }
+}

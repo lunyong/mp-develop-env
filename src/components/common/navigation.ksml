@@ -1,0 +1,24 @@
+<view class="nav-wrap">
+  <view class="nav-content" style="width: {{navWidth}}px; height: {{navHeight}}px;background-color: {{backgroundColor}};">
+    <view class="nav-status" style="height: {{statusBarHeight}}px;"></view>
+    <view class="nav-main" style="height: {{navigationBarHeight}}px;">
+      <view class="nav-left">
+        <view class="nav-back" bindtap="onBackClick">
+          <image class="nav-img" src="/images/nav_back.png"></image>
+        </view>
+        <view class="nav-line"></view>
+        <view class="nav-home" bindtap="onHomeClick">
+          <image class="nav-img" src="/images/nav_home.png"></image>
+        </view>
+      </view>
+      <view class="nav-mid">
+        <view ks:if="{{mode === 'search'}}" class="nav-search" bindtap="onSearchClick">
+          <view class="search-icon"></view>
+          <view class="search-text">搜索更多大片</view>
+        </view>
+        <view ks:else class="nav-title">{{title || '标题'}}</view>
+      </view>
+      <view class="nav-right"></view>
+    </view>
+  </view>
+</view>

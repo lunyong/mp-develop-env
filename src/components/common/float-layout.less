@@ -1,0 +1,66 @@
+.fl-wrap {
+  .fl-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    transform: translateY(150%);
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  .fl-content {
+    position: fixed;
+    left: 0;
+    top: 422rpx;
+    bottom: 0;
+    width: 750rpx;
+    background-color: #ffffff;
+    transform: translateY(150%);
+    transition: transform .3s ease;
+    z-index: 1001;
+
+    &.active {
+      transform: translateY(0);
+    }
+  }
+
+  .fl-head {
+    width: 100%;
+    height: 84rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+  }
+
+  .fl-title {
+    flex: 1;
+    font-size: 32rpx;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .fl-arrow {
+    width: 50rpx;
+    height: 50rpx;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(http://oss.suning.com/ppmp/static/public/img/icon-close-new.png);
+  }
+
+  .fl-body {
+    position: absolute;
+    left: 0;
+    top: 84rpx;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+
+}

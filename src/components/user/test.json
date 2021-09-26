@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "curtain": "../common/curtain",
+    "float-layout": "../common/float-layout"
+  }
+}

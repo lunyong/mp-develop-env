@@ -1,0 +1,7 @@
+<view class="curtain-wrap {{visible ? 'active' : ''}}" style="{{style}}">
+  <view class="curtain-mask"></view>
+  <view class="curtain-content {{direction}}">
+    <slot></slot>
+    <image ks:if="{{closeEnable}}" class="curtain-close" style="{{closeStyle}}" src="{{closeImg}}" catchtap="onCloseClick"></image>
+  </view>
+</view>

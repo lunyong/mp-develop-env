@@ -1,0 +1,12 @@
+<view class="fl-wrap">
+  <view ks:if="{{mask}}" class="fl-mask {{visible ? 'active' : ''}}" catchtap="onMaskClick"></view>
+  <view class="fl-content {{visible ? 'active' : ''}}" style="top: {{position}}">
+    <view class="fl-head">
+      <view class="fl-title">{{title}}</view>
+      <view class="fl-arrow" catchtap="onCloseClick"></view>
+    </view>
+    <view class="fl-body">
+      <slot></slot>
+    </view>
+  </view>
+</view>
